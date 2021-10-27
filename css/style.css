@@ -4,52 +4,37 @@ body {
 	margin: 0;
 }
 
-nav {
-	background-color: black;
-	overflow: hidden;
-	display: flex;
-	justify-content: space-between;
-}
-
-nav a.nav-links {
-	flex-direction: row;
-	color: white;
-	text-align: center;
-	padding: 1em;
-	text-decoration: none;
-	font-size: 1em;
-}
-
-#nav-link-container {
-	display: flex;
-}
-
-nav a.social-links {
-	float: right;
-}
-
-nav a:hover {
-	background-color: rgb(218, 218, 218);
-	color: black;
-}
-
-nav a.current {
-	background-color: cornflowerblue;
-	color: black;
-}
-
-.social-link-img {
-	width: 2em;
-	padding: 0.5em;
-}
-
-.absolute-center {
+.center {
 	margin: 0;
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.img {
+	width: 100%;
+	border-radius: 12, 12px, 0, 0;
+}
+
+.item {
+	width: 15vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+} 
+
+.descriptionText {
+	margin: 1em;
+	font-size: 1.5em;
 }
 
 .button {
@@ -59,36 +44,13 @@ nav a.current {
 	padding: 1em;
 	font-size: 2em;
 	cursor: pointer;
+	margin-top: 1em;
 }
 
 .button:hover {
 	background-color: grey;
 }
 
-.nightMode {
-	background-color: black;
-}
-
-.buttonNightMode {
-	background-color: white;
-	color: black;
-}
-
 label {
 	display: none;
-}
-
-@media screen and (max-width: 600px) {
-	.social-link-img {
-		display: none;
-	}
-	#nav-link-container {
-		flex-direction: column;
-	}
-	nav {
-		justify-content: center;
-	}
-	nav a.nav-links {
-		width: 100vw;
-	}
 }
